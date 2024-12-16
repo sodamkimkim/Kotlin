@@ -1,13 +1,21 @@
 package com.lannstark.lec01
 
-//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
-// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
 fun main() {
-    // nullable
-//    var number1 = 10L;
-//    var number2: Long? = 20L;
-//    number2 = null;
+    println(startsWithA1(null));
+    println(startsWithA2(null));
+}
 
-    var person = Person("김소담");
-    println(person.GetName());
+// null반환 x
+fun startsWithA1(str: String?): Boolean {
+    if (str == null) {
+        return null; // null반환 x
+    }
+    return str.startsWith("A");
+}
+
+// null반환 o
+fun startsWithA2(str: String?): Boolean? {
+    if (str == null)
+        return null; // null반환 o
+    return str.startsWith("A");
 }
