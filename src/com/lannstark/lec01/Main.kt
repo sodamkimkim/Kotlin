@@ -1,0 +1,13 @@
+package com.lannstark.lec01
+
+//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
+// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
+fun main() {
+    // nullable
+//    var number1 = 10L;
+//    var number2: Long? = 20L;
+//    number2 = null;
+
+    var person = Person("김소담");
+    println(person.GetName());
+}
