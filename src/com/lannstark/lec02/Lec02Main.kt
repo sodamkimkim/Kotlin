@@ -1,4 +1,4 @@
-package com.lannstark.lec01
+package com.lannstark.lec02
 
 import java.lang.IllegalArgumentException
 
