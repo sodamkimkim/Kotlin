@@ -4,7 +4,8 @@ fun main() {
     validateScoreIsNotNegative(3);
     println(getPassOrFail(60));
     println(scoreRangeCheck(200));
-    println(getGradeWithSwitch(30));
+    println(getGradeWithSwitch1(30));
+    println(getGradeWithSwitch2(89));
 }
 
 fun validateScoreIsNotNegative(score: Int) {
@@ -21,11 +22,19 @@ fun scoreRangeCheck(score: Int): Boolean {
     return if (score in 0..100) true else false;
 }
 
-fun getGradeWithSwitch(score: Int): String {
+fun getGradeWithSwitch1(score: Int): String {
     return when (score / 10) {
         1 -> "A"
         2 -> "B"
         3 -> "C"
+        else -> "D"
+    }
+}
+fun getGradeWithSwitch2(score: Int): String {
+    return when (score) {
+        in 90..99 -> "A"
+        in 80..89 -> "B"
+        in 70..79 -> "C"
         else -> "D"
     }
 }
