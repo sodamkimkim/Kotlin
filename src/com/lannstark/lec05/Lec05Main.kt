@@ -30,11 +30,20 @@ fun getGradeWithSwitch1(score: Int): String {
         else -> "D"
     }
 }
+
 fun getGradeWithSwitch2(score: Int): String {
     return when (score) {
         in 90..99 -> "A"
         in 80..89 -> "B"
         in 70..79 -> "C"
         else -> "D"
+    }
+}
+
+fun startsWithA(obj: Any): Boolean {
+    //return if(obj is String) obj.startsWith("A") else false;
+    when (obj) {
+        is String -> return obj.startsWith("A");
+        else -> return false;
     }
 }
