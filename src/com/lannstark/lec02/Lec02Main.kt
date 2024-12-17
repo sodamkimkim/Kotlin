@@ -3,7 +3,7 @@ package com.lannstark.lec02
 import java.lang.IllegalArgumentException
 
 fun main() {
-    val person = Person("Sodam2");
+    val person = Person("Sodam2",9);
     // Person의 getName()의 반환값이 Nullable인데
     // startsWithA의 매개변수가 NotNull이라 에러난다.
     println(startsWithA(person.getName()));

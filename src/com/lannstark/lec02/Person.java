@@ -1,15 +1,18 @@
 package com.lannstark.lec02;
 
+import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
 public class Person {
-    String name;
+    public String name;
+    public int age;
 
-    Person(String name) {
+    public Person(String name, int age) {
         this.name = name;
+        this.age = age;
     }
 
-        @NotNull
+    @NotNull
     //@Nullable
     public String getName() {
         return name;
