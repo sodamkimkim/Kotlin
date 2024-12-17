@@ -3,6 +3,7 @@ package com.lannstark.lec05
 fun main() {
     validateScoreIsNotNegative(3);
     println(getPassOrFail(60));
+    println(scoreRangeCheck(200));
 }
 
 fun validateScoreIsNotNegative(score: Int) {
@@ -13,4 +14,8 @@ fun validateScoreIsNotNegative(score: Int) {
 
 fun getPassOrFail(score: Int): String {
     return if (score >= 50) "P" else "F";
+}
+
+fun scoreRangeCheck(score: Int): Boolean {
+    return if(score in 0..100) true else false;
 }
