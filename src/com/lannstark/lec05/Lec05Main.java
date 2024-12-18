@@ -14,4 +14,5 @@ public class Lec05Main {
             return ((String) obj).startsWith("A");
         else return false;
     }
+    
 } // end of class
