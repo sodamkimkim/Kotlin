@@ -5,6 +5,4 @@ abstract class Animal(
     protected open val legCount: Int
 ) {
     abstract fun move();
-
-
 } // end of class
