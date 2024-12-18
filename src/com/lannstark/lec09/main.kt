@@ -26,8 +26,8 @@ class Person(name: String = "홍길동", age: Int = 10) { // end of class
         return this.age >= 20;
     }
 
-    // 프로퍼티처럼 만들기 (Custom Getter)
-    val isAdult: Boolean
-        get() = this.age > 20;
+//    // 프로퍼티처럼 만들기 (Custom Getter)
+//    val isAdult: Boolean
+//        get() = this.age >= 20;
 
 } // end of class
