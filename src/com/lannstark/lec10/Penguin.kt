@@ -1,6 +1,7 @@
 package com.lannstark.lec10
 
-class Penguin(species: String) : Animal(species, 2) { // end of class
+// `:` 로 상속, 인터페이스 구현
+class Penguin(species: String) : Animal(species, 2), Swimable, Flyable {
     private val wingCount: Int = 2;
 
     override fun move() {
@@ -11,4 +12,12 @@ class Penguin(species: String) : Animal(species, 2) { // end of class
     override val legCount: Int
         get() = super.legCount + this.wingCount;
 
-} // end of class
+    override fun act() {
+        super<Swimable>.act()
+        super<Flyable>.act()
+    }
+
+    // interface property override
+    override val swimAbility: Int
+        get() = super.swimAbility + 3;
+}
