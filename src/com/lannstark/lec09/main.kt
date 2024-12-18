@@ -21,11 +21,6 @@ class Person(name: String = "홍길동", age: Int = 10) { // end of class
         println("주생성자");
     }
 
-
-    override fun toString(): String {
-        return "Person(name='$name', age=$age)"
-    }
-
     // 함수로 만들기
     fun isAdult(): Boolean {
         return this.age >= 20;
