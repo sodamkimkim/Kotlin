@@ -3,6 +3,10 @@ package com.lannstark.lec12
 fun main() {
     Person.newBaby("BBUBBU");
     Singleton.a;
+    moveSomething(object : Movable {
+        override fun move() = println("move");
+        override fun fly() = println("fly");
+    });
 }
 
 class Person private constructor(var name: String, var age: Int) {
@@ -21,4 +25,9 @@ class Person private constructor(var name: String, var age: Int) {
 
 object Singleton {
     var a: Int = 0;
+}
+
+private fun moveSomething(movable: Movable) {
+    movable.move();
+    movable.fly();
 }
